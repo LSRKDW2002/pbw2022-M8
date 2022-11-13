@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Study CSS Udinus </title>
+    <link rel="stylesheet" type="text/css" href="styleM8.css">
+</head>
+<body>
+    <main>
+        <header >
+            <h2>&#128155;Welcome To My Site&#128155;</h2>
+        </header>
+        <nav>
+            <aside>
+                <ul>
+                    <li><a href="Home.html"></a>Home</li>
+                    <li><a href="About.html"></a>About</li>
+                    <li><a href="Contact.html"></a>Contact</li>
+                    <li><a href="video.html"></a>Video</li>
+                </ul>
+            </aside>
+        </nav>
+    <article>
+        <p>This is an example of my video and my youtube content</p>
+                <P>
+                    <button onclick="playVid()" type="button">Play Video</button>
+                    <button onclick="pauseVid()" type="button">Pause Video</button>
+                    <button onclick="controlsEnable()" type="button">Controls ON</button>
+                    <button onclick="controlsDisable()" type="button">Controls OFF</button>
+                    <button onclick="getVolume()" type="button">What is the volume?</button>
+                    <button onclick="setHalfVolume()" type="button">Set volume to 0.2</button>
+                    <button onclick="setFullVolume()" type="button">Set volume to 1.0</button>
+                </P>
+
+        <video id="myVideo" width="320" height="420" controls>
+            <source src="dexia.mp4" type="video/mp4">
+            video file not support
+        </video>
+    </article>
+        <script>
+        var vid = document.getElementById("myVideo");
+
+        function playVid() {
+        vid.play();
+        vid.loop = true;
+        }
+
+        function pauseVid() {
+        vid.pause();
+        } 
+
+        function controlsEnable() { 
+        vid.controls = true;
+        vid.load();
+        }
+
+        function controlsDisable() { 
+        vid.controls = false;
+        vid.load();
+        }
+
+        function getVolume() { 
+        alert(vid.volume);
+        } 
+    
+        function setHalfVolume() { 
+        vid.volume = 0.2;
+        } 
+        
+        function setFullVolume() { 
+        vid.volume = 1.0;
+        } 
+
+        </script>
+    
+    <footer>
+        <p>Copyright &copy; 2022 lsr_kdw.</p>
+    </footer>
+</body>
+</html>
